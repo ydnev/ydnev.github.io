@@ -1,0 +1,67 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+ 
+body, html {
+    background-color: rgb(250, 250, 147);
+    height: 100%;
+}
+
+ body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+.organizace-zahlavi {
+    background-color: rgb(184, 74, 18);
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.logo {
+    text-decoration: none;
+    color: rgb(243 242 197);
+    display: grid;
+    grid-template-columns: 1fr 3fr 100fr;
+    align-items: center;
+}
+.logo-obrazek {
+    border-radius: 90%;
+}
+.rozcestnik {
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-size: 1.7em;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+.rozcestnik li a {
+    text-decoration: none;
+    color: rgb(243 242 197);
+    margin: 10px;
+}
+
+.hlavni-obsah-home {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    place-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.zapati {
+    background-color: rgb(184, 74, 18);
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: rgb(228, 202, 170);
+    display: grid;
+    justify-content: center;
+    height: auto;
+}

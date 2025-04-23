@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+    }
+    .organizace-zahlavi {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+    section {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin-bottom: 10px;
+    height: 100%;
+    }
+    form {
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+    input {
+        border-radius: 5%;
+    }
+    button {
+        background-color: rgb(156, 124, 82);
+        padding: 5px;
+        border-radius: 10%;
+        width: 90;
+    }
+    footer {
+    background-color: rgb(184, 74, 18);
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-size: 25px;
+    color: rgb(228, 202, 170);
+    display: grid;
+    justify-content: center;
+    padding-top: 20px;
+    }
+
+
+</style>
+</head>
+<body>
+        <header>
+            <nav class="organizace-zahlavi">
+                <a href="#" class="logo">
+                    <img class="logo-obrazek" src="images/logo.jpeg" alt="->" width="60px" height="60px">
+                    <h2 class="logotext">Ruth's</h2>
+                </a>
+                <ul class="rozcestnik">
+                    <li>
+                        <a href="http://localhost/novy-projekt/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost/novy-projekt/contact-me.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#">Prices</a>
+                    </li>
+                </ul>
+            </nav>    
+        </header>
+
+        <section>
+            <form action="" method="post">
+                <label for="">Your name:</label>
+                    <input type="text" name="jmeno" id="">
+                    <br>
+                <label for="">Your email:</label>
+                    <input type="text" name="email" id="">
+                    <br>
+                <label for="">Leave a message:</label>
+                    <input type="text" name="zprava" id="">
+                    <br>
+                <button type="submit" name="odeslat">Send</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>Let us know when can we expect you...</p>
+        </footer>
+</body>
+</html>
