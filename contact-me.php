@@ -72,7 +72,7 @@ if(array_key_exists("odeslat", $_POST))
                         <a href="https://ydnev.github.io">Home</a>
                     </li>
                     <li>
-                        <a href="https://ydnev.github.io/contact-me.html">Contact</a>
+                        <a href="https://ydnev.github.io/contact-me.php">Contact</a>
                     </li>
                     <li>
                         <a href="#">Gallery</a>
