@@ -1,66 +1,373 @@
+/* ========== SPOLEČNÉ STYLY PRO INDEX I CONTACT-ME ========== */
 
- @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
- 
-body, html {
-    height: 100%;
+/* Základní nastavení těla stránky */
+body {
+  background-color: rgb(205, 193, 160);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
 }
 
- body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    padding: 0px;
-    margin: 0px;
+/* Hlavička a navigace */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.organizace-zahlavi {
-    background-color: rgb(184, 74, 18);
-    font-family: "Borel", cursive;
-    font-weight: 400;
-    font-style: normal;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.organization-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+/* Logo */
 .logo {
-    text-decoration: none;
-    color: rgb(243 242 197);
-    display: grid;
-    grid-template-columns: 1fr 3fr 100fr;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease;
 }
-.logo-obrazek {
-    border-radius: 90%;
-}
-.rozcestnik {
-    font-family: "Borel", cursive;
-    font-weight: 400;
-    font-size: 1.7em;
-    list-style: none;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-}
-.rozcestnik li a {
-    text-decoration: none;
-    color: rgb(243 242 197);
-    margin: 10px;
+.logo:hover {
+  transform: scale(1.05);
 }
 
-.hlavni-obsah-home {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    place-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+.logo-image {
+  margin-right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease;
 }
-.zapati {
-    background-color: rgb(184, 74, 18);
-    font-family: "Borel", cursive;
-    font-weight: 400;
-    font-size: 1.6rem;
-    color: rgb(228, 202, 170);
-    display: grid;
-    justify-content: center;
-    height: auto;
+.logo-image:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* Navigační menu */
+.navigation-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-menu li {
+  position: relative;
+}
+
+.navigation-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navigation-menu a:hover,
+.navigation-menu a:focus {
+  color: #7a5c34; /* jemně hnědá */
+}
+
+.navigation-menu a[aria-current="page"] {
+  font-weight: 700;
+  border-bottom: 3px solid #7a5c34;
+}
+
+/* Paticka */
+footer.footer {
+  background-color: #7a5c34;
+  color: #f9f6ef;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 50px;
+  user-select: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Responsivita hlavičky a navigace */
+@media (max-width: 850px) {
+  .navigation-menu {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.4rem;
+  }
+  
+  .navigation-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ========== STYLY JEN PRO INDEX.HTML ========== */
+
+.main-content-home {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image-container {
+  flex: 1 1 400px;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+  border-radius: 12px;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.text-section {
+  flex: 1 1 400px;
+  max-width: 500px;
+  background-color: #f9f6ef;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+  color: #444;
+}
+
+.text-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #7a5c34;
+  user-select: none;
+}
+
+.text-section h3 {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #a07a3d;
+}
+
+.text-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 850px) {
+  .main-content-home {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section,
+  .image-container {
+    max-width: 90%;
+  }
+}
+
+/* ========== STYLY JEN PRO CONTACT-ME.HTML ========== */
+
+.contact-main {
+  max-width: 600px;
+  margin: 50px auto 30px auto;
+  background-color: #f9f6ef;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #7a5c34;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.contact-main h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  user-select: none;
+}
+
+.contact-item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-item svg {
+  fill: #a07a3d;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.contact-item a {
+  color: #7a5c34;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover,
+.contact-item a:focus {
+  color: #a07a3d;
+}
+
+/* Responsivita pro contact-me */
+@media (max-width: 480px) {
+  .contact-main {
+    padding: 20px;
+    margin: 30px 15px;
+  }
+}
+
+/* ========== STYLY PRO GALLERY.HTML ========== */
+
+.gallery-main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 15px;
+  text-align: center;
+  color: #7a5c34;
+  font-family: Arial, sans-serif;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
+
+/* Lightbox styl */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  user-select: none;
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #aaa;
+}
+
+/* ========== STYLY PRO PRICES.HTML ========== */
+.prices-main {
+  max-width: 900px;
+  margin: 50px auto 30px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  color: #7a5c34;
+}
+
+.prices-main h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  user-select: none;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f6ef;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.price-table thead {
+  background-color: #7a5c34;
+  color: #f9f6ef;
+}
+
+.price-table th,
+.price-table td {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.price-table tr:nth-child(even) {
+  background-color: #f0e9dc;
+}
+
+.price-table tr:hover {
+  background-color: #e7ddc7;
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+}
+
