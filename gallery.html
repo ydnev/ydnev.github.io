@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - Ruth's Braiding Saloon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="organization-header">
+      <a href="index.html" class="logo">
+        <img class="logo-image" src="images/logo.jpeg" alt="Ruth's Logo" width="60" height="60" />
+        <h2 class="logo-text">Ruth's</h2>
+      </a>
+      <ul class="navigation-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact-me.html">Contact</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="prices.html">Prices</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="gallery-main">
+    <h1>Gallery</h1>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="Braiding style 1" class="gallery-item" />
+      <img src="images/gallery2.jpg" alt="Braiding style 2" class="gallery-item" />
+      <img src="images/gallery3.jpg" alt="Braiding style 3" class="gallery-item" />
+      <img src="images/gallery4.jpg" alt="Braiding style 4" class="gallery-item" />
+      <img src="images/gallery5.jpg" alt="Braiding style 5" class="gallery-item" />
+      <img src="images/gallery6.jpg" alt="Braiding style 6" class="gallery-item" />
+    </div>
+  </main>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="Enlarged photo" />
+  </div>
+
+  <footer class="footer">
+    <p>Let us know when can we expect you...</p>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.querySelector('.lightbox-img');
+    const closeBtn = document.querySelector('.close');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = item.src;
+        lightboxImg.alt = item.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+      lightboxImg.alt = '';
+    });
+
+    // Zavřít lightbox klikem mimo obrázek
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+        lightboxImg.alt = '';
+      }
+    });
+  </script>
+</body>
+</html>
