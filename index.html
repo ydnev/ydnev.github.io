@@ -1,72 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Braiding-saloon</title>
-
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Braiding Saloon</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header> 
-        <nav class="organizace-zahlavi">
-            <a href="#" class="logo">
-                <img class="logo-obrazek" src="images/logo.jpeg" alt="->" width="60px" height="60px">
-                <h2 class="logotext">Ruth's</h2>
-            </a>
-            <ul class="rozcestnik">
-                <li>
-                    <a href="https://ydnev.github.io/?">Home</a>
-                </li>
-                <li>
-                    <a href="https://ydnev.github.io/contact-me.php/?">Contact</a>
-                </li>                
-                <li>
-                    <a href="#">Gallery</a>
-                </li>
-                <li>
-                    <a href="#">Prices</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="organization-header" role="navigation" aria-label="Main navigation">
+      <a href="#" class="logo">
+        <img
+          class="logo-image"
+          src="images/logo.jpeg"
+          alt="Ruth's logo"
+          width="60"
+          height="60"
+          loading="lazy"
+        />
+        <h2 class="logo-text">Ruth's</h2>
+      </a>
+      <ul class="navigation-menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="contact-me.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="prices.html">Prices</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="hlavni-obsah-home">
-        <div class="obrazek">
-            <img src="images/obr1.jpeg" alt="obr" width="90%">
-        </div>
+  <main class="main-content-home">
+    <div class="image-container">
+      <img
+        src="images/obr1.jpeg"
+        alt="Example braid hairstyle"
+        loading="lazy"
+      />
+    </div>
 
-        <div class="textova-sekce">
-            <h1>Lorem, ipsum dolor.</h1>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, repellendus?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, eius minus eum, aspernatur ex delectus dolor animi cum iusto doloremque reprehenderit eos recusandae? Optio sunt, doloremque quasi deleniti ab nulla.
-            Corporis eaque minus veniam culpa porro architecto possimus esse reprehenderit ducimus? Mollitia nam numquam illo eum accusamus laboriosam id quas aliquam enim debitis eveniet cum fuga, qui ullam commodi distinctio.
-            <br>
-    
-            <br>
-            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cupiditate, debitis deserunt perspiciatis cum reiciendis suscipit repellat quia nisi dignissimos.</p>
-        </div>
+    <section class="text-section">
+      <h1>Lorem, ipsum dolor.</h1>
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, repellendus?</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, eius minus eum, aspernatur
+        ex delectus dolor animi cum iusto doloremque reprehenderit eos recusandae? Optio sunt,
+        doloremque quasi deleniti ab nulla. Corporis eaque minus veniam culpa porro architecto
+        possimus esse reprehenderit ducimus? Mollitia nam numquam illo eum accusamus laboriosam id
+        quas aliquam enim debitis eveniet cum fuga, qui ullam commodi distinctio.
+      </p>
 
+      <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cupiditate, debitis deserunt
+        perspiciatis cum reiciendis suscipit repellat quia nisi dignissimos.
+      </p>
     </section>
+  </main>
 
-    
-    <footer class="zapati">
-            <p>We are looking forward to your visit!</p>
-    </footer>
+  <footer class="footer">
+    <p>We are looking forward to your visit!</p>
+  </footer>
 
-
-
-<script>
-    
-    document.body.style.backgroundColor = "rgb(205 193 160)";
-    
-</script>
-<!-- <script>
-    let name = prompt("Tell me your name");
-    alert(`Thank you, ${name}, now you can continue to the website :)`);
-    console.log(`the name is ${name}`);
-</script> -->
+  <script src="scripts/main.js"></script>
 </body>
 </html>
